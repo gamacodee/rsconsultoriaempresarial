@@ -37,7 +37,25 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
+<style>
+    /* Estilo para exibir os radio buttons alinhados ao centro */
+    .radio-list {
+     list-style-type: none;
+     padding: 0;
+     display: flex;
+     justify-content: center; /* Alinha os itens ao centro */
+     flex-wrap: wrap; /* Quebra para próxima linha se necessário */
+   }
+   .radio-list li {
+     text-align: center; /* Alinha texto do label ao centro */
+     margin: 10px; /* Espaçamento entre os radio buttons */
+     color:white;
+   }
+   .radio-list label {
+     display: block; /* Para colocar o texto acima do radio button */
+     margin-bottom: 5px; /* Espaço entre o texto e o radio button */
+   }
+ </style>
 <body>
     <!-- preloader area start -->
     <div id="preloader">
@@ -50,14 +68,14 @@
                 <div class="row">
                     <div class="col-md-9 col-sm-12 col-12 col-lg-10">
                         <ul class="d-flex account_login-area header-contact">
-                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Av. Diário de Notícias nº 200 - Sala 2213/2214
+                            <!-- <li><i class="fa fa-map-marker" aria-hidden="true"></i>Av. Diário de Notícias nº 200 - Sala 2213/2214
                               </li>
-                            <li><i class="fa fa-mobile" aria-hidden="true"></i>(51) 4061-2600</li>
-                            <li><i class="fab fa-instagram" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-mobile" aria-hidden="true"></i>(51) 4061-2600</li> -->
+                            <li><a href="https://www.instagram.com/rs_consultoriaempresarial/" target="_blank"> <i class="fab fa-instagram" aria-hidden="true"></a></i></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-12">
-                        <div class="btn-style btn-style2"><a href="#" style="text-transform: uppercase;"> <i class="fab fa-whatsapp"></i> Fale Conosco</a></div>
+                        <div class="btn-style btn-style2"><a href="https://api.whatsapp.com/send?phone=5551999543974&text=Contato%20pelo%20site%20RS%20Consultoria%20" target="_blank" style="text-transform: uppercase;"> <i class="fab fa-whatsapp"></i> Fale Conosco</a></div>
                     </div>
                 </div>
             </div>
@@ -77,7 +95,7 @@
                                     <ul>
                                         <li  class="active" ><a  href="./">HOME</a></li>
                                   
-                                        <li><a href="sobre.html">SOBRE</a></li>
+                                        <li><a href="sobre.html">QUEM SOMOS</a></li>
                                        
                                         <li><a href="recuperacao-ativos.html">ÁREA DE ATUAÇÃO</a></li>
     
@@ -392,7 +410,7 @@ background: #fbfbfb;
         <div class="col-l2">
             <div class="section-title text-center">
                 <span>Rs Consultoria Empresarial</span>
-                <h2 style="color: black;">Nossos Parceiros</h2>
+                <h2 style="color: black;">Alguns de Nossos Clientes</h2>
             </div>
         </div>
         <div class="col-6 col-md-2">
@@ -638,7 +656,7 @@ background: #fbfbfb;
     </div> -->
     <!-- expert-area end -->
     <!-- .counter-area start -->
-    <div class="counter-area">
+    <!-- <div class="counter-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -671,7 +689,7 @@ background: #fbfbfb;
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
         <!-- testimonial area start -->
         <div class="testimonial-area">
@@ -733,6 +751,24 @@ background: #fbfbfb;
                     <div class="contact-content">
                         <div class="contact-form">
                             <form method="post" class="contact-validation-active">
+                                <ul class="radio-list">
+                                    <li>
+                                        <input type="radio" id="opcao1" name="opcao" value="opcao1">
+                                        <label for="opcao1">Porto Alegre <br> RS</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="opcao2" name="opcao" value="opcao2">
+                                        <label for="opcao2">Florianópolis<br> SC</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="opcao3" name="opcao" value="opcao3">
+                                        <label for="opcao3">São Paulo <br> SP</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="opcao4" name="opcao" value="opcao4">
+                                        <label for="opcao4">Rio de Janeiro <br> RJ</label>
+                                    </li>
+                                  </ul>
                                 <div class="half-col">
                                     <input type="text" name="name" id="name" class="form-control"
                                         placeholder="Nome" required="true">
@@ -745,15 +781,10 @@ background: #fbfbfb;
                                         placeholder="Email">
                                 </div>
                                 <div class="half-col">
-                                    <select name="address" id="address" class="form-control">
-                                        <option disabled selected>Direito Tributário</option>
-                                        <option>Direito Empresarial</option>
-                                        <option>Direito Previdenciário</option>
-                                        <option>Direito Trabalhista</option>
-                                        <option>Direito Consumidor</option>
-                                        <option>Direito Civíl</option>
-                                    </select>
+                                    <input type="text" name="assunto" required="true" id="email" class="form-control"
+                                        placeholder="Assunto">
                                 </div>
+                             
                                 <div>
                                     <textarea class="form-control" name="note" id="note"
                                         placeholder="Mensagem..."></textarea>
@@ -917,9 +948,9 @@ background: #fbfbfb;
                         </div>
                         <div class="col-lg-6 col-12">
                             <ul class="d-flex">
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li> -->
+                                <li><a href="https://api.whatsapp.com/send?phone=5551999543974&text=Contato%20pelo%20site%20RS%20Consultoria%20" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/rs_consultoriaempresarial/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
